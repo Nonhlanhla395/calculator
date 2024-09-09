@@ -21,12 +21,12 @@ class loan:
         a = self.amount
         self.loan_type = 'Compound interest'
         for i in range(self.term):
-            a += a * (rate / 100)  # Apply interest for each compounding period
+            a += a * (rate / 100)  # Apply interest for each compounding period.
         self.total = a
         self.interest = a - self.amount
     
     def reciept(self):
-        # Print a receipt showing the amount, type of loan, and the interest calculated
+        # Print a receipt showing the amount, type of loan, and the interest calculated.
         print(f'R {self.amount} {self.loan_type} loan taken ')
         print(f'{self.interest} ')
 
@@ -38,7 +38,7 @@ def main():
     amount = float(input("Enter amount: "))
     term = int(input("Enter period: "))
     
-    # Create a loan object with the provided amount and term
+    # Create a loan object with the provided amount and term.
     l = loan(amount, term)
 
     # Prompt the user to choose the type of interest calculation
@@ -46,10 +46,10 @@ def main():
 
     # Perform the chosen interest calculation
     if type == 1:
-        l.calculate_simple_interest(50)  # Example interest rate for simple interest
+        l.calculate_simple_interest(50)  # Example interest rate for simple interest.
     
     elif type == 2:
-        l.calculate_compound_interest(30)  # Example interest rate for compound interest
+        l.calculate_compound_interest(30)  # Example interest rate for compound interest.
 
     else:
         # Handle invalid input
